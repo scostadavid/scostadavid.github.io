@@ -5,7 +5,7 @@ const config: GatsbyConfig = {
     title: `scostadavid.github.io`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: ['gatsby-plugin-styled-components'],
 }
 
 export default config
