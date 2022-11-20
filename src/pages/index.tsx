@@ -6,7 +6,7 @@ import {
   H3,
   Paragraph,
   TypeMachineParagraph,
-  Span
+  Span,
 } from '../components/Typography';
 import Header from '../components/Header';
 import Nav from '../components/Nav';
@@ -33,17 +33,13 @@ const Content = styled.section`
 
 const AboutSection = (): JSX.Element => (
   <Content>
-    {/* <H1 color={'#9C79FF'}>Always developing.</H1> */}
-    <Nav/>
-    <H2>
-      <TypeMachineParagraph quote={'Hello world, i\'m David Costa'}/>
-    </H2>
+    <H1>
+      <TypeMachineParagraph quote={'Hi, i\'m David Costa'}/>
+    </H1>
     <Paragraph>
-    {' A full stack developer currently developing web and mobile wellness solutions with react and rails at Good Software 🦊. Willing to learn new technologies with familiarity in game development, web applications and academic projects. '}
+    {' A full stack developer currently developing web and mobile wellness solutions with React, Node, Rails and AWS at Good Software 🦊.'}
     </Paragraph>
-    {/* <Paragraph>
-    {' 🦊 download my resume '}
-    </Paragraph> */}
+    <Nav/>
   </Content>
 );
 
@@ -154,37 +150,10 @@ const ProjectEntry = ({
 
 const ProjectsSection = (): JSX.Element => (
   <Content>
-    <H2><Span color={'#9C79FF'}>{'› '}</Span>Projects</H2>
+    <H2><Span color={'#00FF97'}>{'› '}</Span>Projects</H2>
     <ProjectsList>
       {projects.map((project, index) => <ProjectEntry {...project}/>)}
     </ProjectsList>
-  </Content>
-);
-
-
-const ContactSection = (): JSX.Element => (
-  <Content>
-    <H2><Span color={'#9C79FF'}>{'› '}</Span>Contact</H2>
-    <ul>
-      <li>
-        <Paragraph>
-          <a
-            href={'mailto:davidshcosta@gmail.com'}
-            target={'_blank'}
-            rel={'noreferrer noopener'}
-          >✉️ davidshcosta@gmail.com</a>
-        </Paragraph>
-      </li>
-      <li>
-        <Paragraph>
-          <a
-            href={'https://linkedin.com/in/scostadavid'}
-            target={'_blank'}
-            rel={'noreferrer noopener'}
-          >💼 linkedin</a>
-        </Paragraph>
-      </li>
-    </ul>
   </Content>
 );
 
@@ -199,7 +168,6 @@ const IndexPage = (): JSX.Element => {
         <Container>
           <AboutSection/>
           <ProjectsSection/>
-          <ContactSection/>
         </Container>
       </main>
     </>

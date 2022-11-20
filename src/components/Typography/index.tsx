@@ -40,7 +40,7 @@ const H3 = styled.h3`
 
 const Paragraph = styled.p`
   color: ${props => `${props.color}`};
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 0.6rem;
@@ -72,7 +72,7 @@ const TypeMachineParagraph = ({quote}: {quote: string}): JSX.Element => {
 
   return (
     <div>
-      <Span color="#9C79FF">{'› '}</Span>
+      <Span color="#00FF97">{'› '}</Span>
       {quote.substring(0, index)}
       <BlinkingCursor />
     </div>
@@ -83,13 +83,6 @@ const TypeMachineParagraph = ({quote}: {quote: string}): JSX.Element => {
 const Span = styled.span`
   color: ${props => props.color || '#fff'};
 `;
-
-// componente para marcar a parte de games, web e projetos academicos do meu sobre como uma tag kbd mas com cores invertidas
-const Highlight = styled.mark`
-  color: ${props => props.color || '#000'}
-  background-color: #fff;
-`;
-
 
 export {
   H1,

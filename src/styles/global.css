@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 html {
-  background-color: #242424;
+  background-color: #222;
   font-family: 'Ubuntu', sans-serif;
 }
 
 a {
   text-decoration: none;
-  color: #FFF;
+  color: #ffffffe0;
 }
 
-a:hover {
-  color: #9C79FF;
-}
+/* a:hover {
+  color: #00FF97;
+} */

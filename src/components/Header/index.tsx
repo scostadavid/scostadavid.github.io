@@ -41,10 +41,13 @@ const StyledHeader = styled.header`
 export default (): JSX.Element => {
   return (
     <StyledHeader>
-      <H2 color="#9C79FF">{'<scostadavid/>'}</H2>
+      <H2 color="#00FF97">{'<scostadavid/>'}</H2>
       {/* <ul>
         <li>
           <a rel="noopener noreferrer" href="https://github.com/scostadavid" target="_blank">/github</a>
+        </li>
+        <li>
+          <a rel="noopener noreferrer" href="https://github.com/scostadavid" target="_blank">/blog</a>
         </li>
       </ul> */}
     </StyledHeader>
