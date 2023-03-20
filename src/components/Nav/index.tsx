@@ -108,9 +108,9 @@ export const Nav = (): JSX.Element => {
             <FaTwitter />
           </IconLink>
         </li>
-        <li>
+        {/* <li>
           <EmailButton/>
-        </li>
+        </li> */}
       </List>
     </StyledNav>
   )
