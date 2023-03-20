@@ -17,6 +17,7 @@
     "deploy": "gatsby build && gh-pages -d public -b deploy"
   },
   "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
     "@types/styled-components": "^5.1.24",
     "babel-plugin-styled-components": "^2.0.6",
     "gatsby": "^4.10.2",

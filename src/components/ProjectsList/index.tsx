@@ -4,7 +4,7 @@ import dlh from '../../images/dlh.png';
 export const projects = [
   {
     title: '🌱 Game of life',
-    description: 'C language cellular automata simulation implementation.',
+    description: 'C++ cellular automata simulation.',
     imageSrc: 'https://github.com/scostadavid/game-of-life/raw/main/resources/screenshots/preview.gif',
     link: 'https://github.com/scostadavid/game-of-life',
   },
@@ -26,8 +26,13 @@ export const projects = [
 export default styled.ul`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   list-style: none;
   margin: 0;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1rem;
   padding: 0;
 `;

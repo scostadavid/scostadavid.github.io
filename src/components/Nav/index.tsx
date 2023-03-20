@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { FaLinkedin} from '@react-icons/all-files/fa/FaLinkedin';
+import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
+import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter';
 
 const StyledNav = styled.nav`
   display: flex;
@@ -22,36 +25,93 @@ const StyledNav = styled.nav`
   }
 `;
 
-const ButtonLink = styled.a`
+const ButtonLink = styled.button`
   color: white;
+  padding: 1rem;
   background-color: transparent;
-  border: 1px solid #00FF97;
+  border: 1px solid white;
   border-radius: 4px;
   padding: .5rem;
-  display: block;
-  width: 4rem;
+  display: flex;
   text-align: center;
-  transition: .5s;
+  transition: .2s;
   :hover {
+    border: 1px solid #00FF97;
     background-color: #00FF97;
     color: black;
   }
 `;
 
-export default (): JSX.Element => {
+const IconLink = styled.a`
+  svg {
+    width: 1.7rem;
+    height: 1.7rem;
+    color: #fff;
+    transition: .2s;
+    :hover {
+      cursor: pointer;
+      color: #00FF97;
+
+    }
+  }
+`;
+
+const List = styled.ul`
+  align-items: center;
+`;
+
+async function copyTextToClipboard(text: string) {
+  if ('clipboard' in navigator) {
+    return await navigator.clipboard.writeText(text);
+  }
+}
+
+const DEFAULT_EMAIL: string = 'scostadavid@proton.me';
+
+const EmailButton = (): JSX.Element => {
+  const [content, setContent] = useState(DEFAULT_EMAIL);
+
+  const handleClick = (e: React.MouseEvent): Promise<void> => {
+    e.preventDefault();
+    return copyTextToClipboard(DEFAULT_EMAIL)
+      .then(() => {
+        setContent('copied to clipboard');
+        setTimeout(() => {
+          setContent(DEFAULT_EMAIL)
+        }, 1000);
+      })
+  }
+
+  return(
+    <ButtonLink onClick={handleClick}>
+      {content}
+    </ButtonLink>
+  )
+}
+
+export const Nav = (): JSX.Element => {
   return (
     <StyledNav>
-      <ul>
-        <li>
-          <ButtonLink rel={'noopener noreferrer'} href={'mailto:scostadavid@proton.me'}>E-mail</ButtonLink>
+      <List>
+	    	<li>
+          <IconLink rel={'noopener noreferrer'} href="https://github.com/scostadavid" target={'_blank'}>
+            <FaGithub/>
+          </IconLink>
         </li>
 	    	<li>
-          <ButtonLink rel={'noopener noreferrer'} href={'https://linkedin.com/in/scostadavid'} target={'_blank'}>Linkedin</ButtonLink>
+          <IconLink rel={'noopener noreferrer'} href={'https://linkedin.com/in/scostadavid'} target={'_blank'}>
+            <FaLinkedin />
+          </IconLink>
         </li>
-    		<li>
-          <ButtonLink rel={'noopener noreferrer'} href="https://github.com/scostadavid" target={'_blank'}>Github</ButtonLink>
+        <li>
+          <IconLink rel={'noopener noreferrer'} href={'https://twitter.com/scostadavid'} target={'_blank'}>
+            <FaTwitter />
+          </IconLink>
         </li>
-      </ul>
+        <li>
+          <EmailButton/>
+        </li>
+      </List>
     </StyledNav>
   )
 }

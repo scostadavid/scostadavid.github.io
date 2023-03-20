@@ -9,7 +9,7 @@ import {
   Span,
 } from '../components/Typography';
 import Header from '../components/Header';
-import Nav from '../components/Nav';
+import {Nav} from '../components/Nav';
 
 import ProjectsList, { projects } from '../components/ProjectsList';
 
@@ -18,10 +18,9 @@ const Container = styled.div`
   margin-left: auto;
   width: 650px;
   :last-child {
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
   }
   @media (max-width: 850px) {
-    // background-color: #fff;
     width: 80%;
   }
 `;
@@ -35,20 +34,24 @@ const AboutSection = (): JSX.Element => (
   <Content>
     <H1>
       <TypeMachineParagraph quote={'Hi, i\'m David Costa'}/>
+      <noscript>
+        Hi, i'm David Costa
+      </noscript>
     </H1>
+    <H2>Full Stack developer</H2>
     <Paragraph>
-    {' A full stack developer currently developing web and mobile wellness solutions with React, Node, Rails and AWS at Good Software 🦊.'}
+    {'Currently developing wellness web and mobile  solutions with React, Node, Rails and AWS at Good Software 🦊'}
     </Paragraph>
     <Nav/>
   </Content>
 );
 
 const StyledEntry = styled.li`
-  img {
-    max-width: 100%;
-    border-radius: 4px;
-  }
-  margin-bottom: 1rem;
+  // img {
+  //   max-width: 100%;
+  //   border-radius: 4px;
+  // }
+  // margin-bottom: 1rem;
 `;
 
 interface HoverImage {
@@ -63,13 +66,13 @@ const HoverImage = ({
   hoverContent
 }: HoverImage): JSX.Element => {
 
-  const IContainer = styled.div`
+  const HoverableImageContainer = styled.div`
     position: relative;
   `;
 
   const Image = styled.img`
-    // display: block;
-    // width: 100%;
+    width: 100%;
+    aspect-ratio: 16/9;
   `;
 
   const Overlay = styled.div`
@@ -99,11 +102,11 @@ const HoverImage = ({
 
   return (
     <a
-    href={link}
-    target={'_blank'}
-    rel={'noreferrer noopener'}
+      href={link}
+      target={'_blank'}
+      rel={'noreferrer noopener'}
     >
-      <IContainer>
+      <HoverableImageContainer>
         <Image
           src={src}
           // metadata
@@ -113,7 +116,7 @@ const HoverImage = ({
             {hoverContent}
           </H3>
         </Overlay>
-      </IContainer>
+      </HoverableImageContainer>
     </a>
   );
 
@@ -147,15 +150,32 @@ const ProjectEntry = ({
   </StyledEntry>
 );
 
-
-const ProjectsSection = (): JSX.Element => (
-  <Content>
+const ProjectsSection = (): JSX.Element => {
+  return (
+    <Content>
     <H2><Span color={'#00FF97'}>{'› '}</Span>Projects</H2>
     <ProjectsList>
-      {projects.map((project, index) => <ProjectEntry {...project}/>)}
+      {projects.map((project) => <ProjectEntry {...project}/>)}
     </ProjectsList>
   </Content>
-);
+  )
+
+};
+
+const StyledFooter = styled.footer`
+  display: flex;
+  justify-content: center;
+  color: white;
+  padding: 1rem;
+`;
+
+const Footer = () => {
+  return (
+    <StyledFooter>
+      Developed with gatsby by 👨‍💻 David Costa.
+    </StyledFooter>
+  )
+}
 
 const IndexPage = (): JSX.Element => {
   return (
@@ -170,6 +190,9 @@ const IndexPage = (): JSX.Element => {
           <ProjectsSection/>
         </Container>
       </main>
+      <Container>
+        <Footer/>
+      </Container>
     </>
   )
 }
