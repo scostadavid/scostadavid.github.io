@@ -26,11 +26,11 @@ const AboutSection = (): JSX.Element => (
     <H1>
       <TypeMachineParagraph quote={'Your Full Stack problem solver'}/>
       <noscript>
-      Hi, i’m David Costa and i currently developing web and mobile wellness solutions with React, Node, Rails and AWS at <a href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</a>. Passionate about developing software experiences and solve problems with tech.
+      Hi, i’m David Costa and i currently developing web and mobile wellness solutions with React, Node, Rails and AWS at <a href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</a>.
       </noscript>
     </H1>
     <Paragraph>
-    Hi, I'm David Costa and I'm currently developing web and mobile wellness solutions with React, Node, Rails, and AWS at <Link href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</Link>. I'm passionate about developing software experiences and solving problems with technology. Feel free to contact me to consultancies, discuss projects, and more.
+    Hi, I'm David Costa and I'm currently developing web and mobile wellness solutions with React, Node, Rails, and AWS at <Link href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</Link>.
     </Paragraph>
     <Nav/>
   </Content>
