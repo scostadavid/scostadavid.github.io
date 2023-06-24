@@ -10,10 +10,11 @@ import {
 } from '../components/Typography';
 import Header from '../components/Header';
 import { Nav } from '../components/Nav';
+import { Footer } from '../components/Footer';
+import { Link } from '../components/Link';
 
 import { GridList, projects }  from '../components/ProjectsList';
 import { Container } from '../layout/Container';
-import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
 
 const Content = styled.section`
   padding: 0 0 1rem 0;
@@ -29,7 +30,7 @@ const AboutSection = (): JSX.Element => (
       </noscript>
     </H1>
     <Paragraph>
-    Hi, I'm David Costa and I'm currently developing web and mobile wellness solutions with React, Node, Rails, and AWS at GoGood Software. I'm passionate about developing software experiences and solving problems with technology. Feel free to contact me to consultancies, discuss projects, and more.
+    Hi, I'm David Costa and I'm currently developing web and mobile wellness solutions with React, Node, Rails, and AWS at <Link href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</Link>. I'm passionate about developing software experiences and solving problems with technology. Feel free to contact me to consultancies, discuss projects, and more.
     </Paragraph>
     <Nav/>
   </Content>
@@ -67,7 +68,7 @@ const ProjectEntry = ({
   link
 }: ProjectEntry): JSX.Element => (
   <StyledEntry>
-          <a
+      <a
         href={link}
         target={'_blank'}
         rel={'noreferrer noopener'}
@@ -86,29 +87,19 @@ const ProjectEntry = ({
 const ProjectsSection = (): JSX.Element => {
   return (
     <Content>
-    <H2><Span color={'#00FF97'}>{'› '}</Span>Projects</H2>
-    <GridList>
-      {projects.map((project) => <ProjectEntry key={'pr_' + project.title} {...project}/>)}
-    </GridList>
-  </Content>
+      <H2>
+        <TypeMachineParagraph quote={'Projects'}/>
+        <noscript>
+          projects
+        </noscript>
+      </H2>
+      <GridList>
+        {projects.map((project) => <ProjectEntry key={'pr_' + project.title} {...project}/>)}
+      </GridList>
+    </Content>
   )
 
 };
-
-const StyledFooter = styled.footer`
-  display: flex;
-  justify-content: center;
-  color: white;
-  padding: 1rem;
-`;
-
-const Footer = () => {
-  return (
-    <StyledFooter>
-      Developed by 👨‍💻 <a href="">David Costa</a>.
-    </StyledFooter>
-  )
-}
 
 const IndexPage = (): JSX.Element => {
   return (
