@@ -41,7 +41,7 @@ const StyledEntry = styled.li`
   border-radius: 5px;
   padding: .5rem;
   :hover {
-    border: 1px solid #00FF97;
+    border: 1px solid #535bf2;
     cursor: pointer;
   }
   img {
@@ -68,18 +68,18 @@ const ProjectEntry = ({
   link
 }: ProjectEntry): JSX.Element => (
   <StyledEntry>
-      <a
-        href={link}
-        target={'_blank'}
-        rel={'noreferrer noopener'}
-      >
-    <Image src={imageSrc} />
-    <H3>
-    {title}{' '}
-    </H3>
-    <Paragraph>
-    {description}
-    </Paragraph>
+    <a
+      href={link}
+      target={'_blank'}
+      rel={'noreferrer noopener'}
+    >
+      <Image src={imageSrc} />
+      <H3>
+      {title}{' '}
+      </H3>
+      <Paragraph>
+      {description}
+      </Paragraph>
     </a>
   </StyledEntry>
 );

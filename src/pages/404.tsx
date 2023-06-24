@@ -28,7 +28,7 @@ const NotFoundPage = () => {
   return (
     <main style={pageStyles}>
       <title>scostadavid</title>
-      <H1 color="#00FF97">{'<Page not found/>'}</H1>
+      <H1 color="#535bf2">{'<Page not found/>'}</H1>
       <p style={paragraphStyles}>
         Sorry{" "}
         <span role="img" aria-label="Pensive emoji">

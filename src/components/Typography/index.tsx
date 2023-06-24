@@ -41,7 +41,7 @@ const Paragraph = styled.p`
 `;
 
 const Span = styled.span`
-  color: ${props => props.color || '#fff'};
+  color: ${props => props.color || '#333'};
 `;
 
 const BlinkingCursor = (): JSX.Element => {
@@ -75,7 +75,7 @@ const TypeMachineParagraph = ({quote}: TypeMachineParagraph): JSX.Element => {
 
   return (
     <>
-      <Span color="#00FF97">{'› '}</Span>
+      <Span color="#535bf2">{'› '}</Span>
       {quote.substring(0, index)}
       <BlinkingCursor />
     </>

@@ -36,8 +36,8 @@ const ButtonLink = styled.button`
   text-align: center;
   transition: .2s;
   :hover {
-    border: 1px solid #00FF97;
-    background-color: #00FF97;
+    border: 1px solid #535bf2;
+    background-color: #535bf2;
     color: black;
   }
 `;
@@ -50,7 +50,7 @@ const IconLink = styled.a`
     transition: .2s;
     :hover {
       cursor: pointer;
-      color: #00FF97;
+      color: #535bf2;
 
     }
   }

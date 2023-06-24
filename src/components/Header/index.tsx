@@ -20,7 +20,7 @@ const StyledHeader = styled.header`
 
   a {
     text-decoration: none;
-    color: #fff;
+    color: #535bf2;
   }
 
   button {
@@ -41,7 +41,7 @@ const StyledHeader = styled.header`
 export default (): JSX.Element => {
   return (
     <StyledHeader>
-      <H2 color="#00FF97">{'<scostadavid/>'}</H2>
+      <H2 color="#535bf2">{'<scostadavid/>'}</H2>
       {/* <ul>
         <li>
           <a rel="noopener noreferrer" href="https://github.com/scostadavid" target="_blank">/github</a>
