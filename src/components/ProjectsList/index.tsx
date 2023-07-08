@@ -1,18 +1,27 @@
 import styled from 'styled-components';
-import dlh from '../../images/dlh.png';
+import dlh from '../../images/dlh.avif';
+import shirmp from '../../images/shrimp.css.avif';
+import gof from '../../images/gameoflife.webp';
+import pomoclock from '../../images/pomoclock.avif';
 
 export const projects = [
   {
-    title: '🌱 Game of life',
-    description: 'C++ cellular automata simulation',
-    imageSrc: 'https://github.com/scostadavid/game-of-life/raw/main/resources/screenshots/preview.gif',
-    link: 'https://github.com/scostadavid/game-of-life',
+    title: '🍅 Pomoclock',
+    description: 'Pomodoro productivity focused app',
+    imageSrc: pomoclock,
+    link: 'https://scostadavid.github.io/pomoclock/',
   },
   {
     title: '🦐 shrimp.css',
     description: 'Classless CSS framework for markdown generated html',
-    imageSrc: 'https://github.com/scostadavid/shrimp.css/raw/main/public/img/screenshot.png',
-    link: 'https://github.com/scostadavid/shrimp.css',
+    imageSrc: shirmp,
+    link: 'https://scostadavid.github.io/shrimp.css',
+  },
+  {
+    title: '🌱 Game of life',
+    description: 'C++ cellular automata simulation',
+    imageSrc: gof,
+    link: 'https://github.com/scostadavid/game-of-life',
   },
   {
     title: '🕹️ Dawn\'s Lighthouse',
@@ -26,7 +35,7 @@ export const projects = [
 export const GridList = styled.ul`
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
   list-style: none;
   margin: 0;

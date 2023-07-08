@@ -24,13 +24,16 @@ const Content = styled.section`
 const AboutSection = (): JSX.Element => (
   <Content>
     <H1>
-      <TypeMachineParagraph quote={'Your Full Stack problem solver'}/>
+      <TypeMachineParagraph quote={'Hi, i’m David Costa'}/>
       <noscript>
       Hi, i’m David Costa and i currently developing web and mobile wellness solutions with React, Node, Rails and AWS at <a href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</a>.
       </noscript>
     </H1>
+    <H2 color={'#535bf2'}>
+      Software Engineer
+    </H2>
     <Paragraph>
-    Hi, I'm David Costa and I'm currently developing web and mobile wellness solutions with React, Node, Rails, and AWS at <Link href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</Link>.
+    Currently developing web and mobile wellness solutions with React, Node, Rails, and AWS at <Link href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</Link>.
     </Paragraph>
     <Nav/>
   </Content>
@@ -61,12 +64,7 @@ const Image = styled.img`
   aspect-ratio: 16/9;
 `;
 
-const ProjectEntry = ({
-  title,
-  description,
-  imageSrc,
-  link
-}: ProjectEntry): JSX.Element => (
+const ProjectEntry = ({title, description, imageSrc, link}: ProjectEntry): JSX.Element => (
   <StyledEntry>
     <a
       href={link}

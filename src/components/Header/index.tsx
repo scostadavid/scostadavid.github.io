@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 6rem;
   ul {
     list-style: none;
     display: flex;
@@ -41,13 +41,16 @@ const StyledHeader = styled.header`
 export default (): JSX.Element => {
   return (
     <StyledHeader>
-      <H2 color="#535bf2">{'<scostadavid/>'}</H2>
+      <H2 color="#535bf2">{'{scostadavid}'}</H2>
       {/* <ul>
         <li>
           <a rel="noopener noreferrer" href="https://github.com/scostadavid" target="_blank">/github</a>
         </li>
         <li>
-          <a rel="noopener noreferrer" href="https://github.com/scostadavid" target="_blank">/blog</a>
+          <a rel="noopener noreferrer" href="https://github.com/scostadavid" target="_blank">/linkedin</a>
+        </li>
+        <li>
+          <a rel="noopener noreferrer" href="https://github.com/scostadavid" target="_blank">/twitter</a>
         </li>
       </ul> */}
     </StyledHeader>
