@@ -6,10 +6,10 @@ import pomoclock from '../../images/pomoclock.avif';
 
 export const projects = [
   {
-    title: '🍅 Pomoclock',
-    description: 'Pomodoro productivity focused app',
+    title: '🎯 Focus nook',
+    description: 'Productivity focused app',
     imageSrc: pomoclock,
-    link: 'https://scostadavid.github.io/pomoclock/',
+    link: 'https://scostadavid.github.io/focusnook/',
   },
   {
     title: '🦐 shrimp.css',
