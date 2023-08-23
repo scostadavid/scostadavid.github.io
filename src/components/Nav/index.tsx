@@ -103,11 +103,11 @@ export const Nav = (): JSX.Element => {
             <FaLinkedin />
           </IconLink>
         </li>
-        <li>
+        {/* <li>
           <IconLink rel={'noopener noreferrer'} href={'https://twitter.com/scostadavid'} target={'_blank'}>
             <FaTwitter />
           </IconLink>
-        </li>
+        </li> */}
         {/* <li>
           <EmailButton/>
         </li> */}

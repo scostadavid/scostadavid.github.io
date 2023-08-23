@@ -7,6 +7,7 @@ export const Footer = (): JSX.Element => {
   const FooterContainer = styled.footer`
     display: flex;
     justify-content: center;
+    text-align: center;
     color: white;
     padding: 1rem;
   `;
