@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import dlh from '../../images/dlh.avif';
 import shirmp from '../../images/shrimp.css.avif';
 import gof from '../../images/gameoflife.webp';
-import pomoclock from '../../images/pomoclock.avif';
+import fn from '../../images/fn.avif';
 
 export const projects = [
   {
     title: '🎯 Focus nook',
     description: 'Productivity focused app',
-    imageSrc: pomoclock,
+    imageSrc: fn,
     link: 'https://scostadavid.github.io/focusnook/',
   },
   {
