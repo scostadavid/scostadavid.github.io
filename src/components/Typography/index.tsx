@@ -5,25 +5,25 @@ const H1 = styled.h1`
   color: ${props => `${props.color}`};
   font-size: 2.6rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   @media (max-width: 850px) {}
 `;
 
 const H2 = styled.h2`
   color: ${props => `${props.color}`};
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 1rem;
 
   @media (max-width: 850px) {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     word-break: break-word;
   }
 `;
 
 const H3 = styled.h3`
   color: ${props => `${props.color}`};
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 
@@ -32,7 +32,7 @@ const H3 = styled.h3`
 
 const Paragraph = styled.p`
   color: ${props => `${props.color}`};
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 400;
   line-height: 1.2;
   margin-bottom: 0.6rem;

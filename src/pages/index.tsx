@@ -17,23 +17,20 @@ import { GridList, projects }  from '../components/ProjectsList';
 import { Container } from '../layout/Container';
 
 const Content = styled.section`
-  padding: 0 0 1rem 0;
+  padding: 0 0 4rem 0;
   color: #fff;
 `;
 
 const AboutSection = (): JSX.Element => (
   <Content>
     <H1>
-      <TypeMachineParagraph quote={'Hi, i’m David Costa'}/>
+      <TypeMachineParagraph quote={'👋 Hi i\'m David'}/>
       <noscript>
-      Hi, i’m David Costa and i currently developing web and mobile wellness solutions with React, Node, Rails and AWS at <a href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</a>.
+      {'👋'} Hi, i’m <Link href={'https://linkedin.com/in/scostadavid'} target={'_blank'} rel={'noreferrer noopener'}>David Costa</Link>, a Full Stack Sofware Enginner based in Brazil. Currently developing web and mobile wellness solutions with React, Node, Rails, and AWS at <Link href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</Link>.
       </noscript>
     </H1>
-    <H2 color={'#535bf2'}>
-      Software Engineer
-    </H2>
     <Paragraph>
-    Currently developing web and mobile wellness solutions with React, Node, Rails, and AWS at <Link href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</Link>.
+    I’m David Costa, a Full Stack Sofware Enginner based in Brazil. Currently developing web and mobile wellness solutions with React, Node, Rails, and AWS at <Link href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</Link>.
     </Paragraph>
     <Nav/>
   </Content>
@@ -86,10 +83,7 @@ const ProjectsSection = (): JSX.Element => {
   return (
     <Content>
       <H2>
-        <TypeMachineParagraph quote={'Projects'}/>
-        <noscript>
-          projects
-        </noscript>
+        Projects
       </H2>
       <GridList>
         {projects.map((project) => <ProjectEntry key={'pr_' + project.title} {...project}/>)}

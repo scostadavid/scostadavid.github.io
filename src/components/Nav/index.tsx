@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { FaLinkedin} from '@react-icons/all-files/fa/FaLinkedin';
 import { FaGithub } from '@react-icons/all-files/fa/FaGithub';
-import { FaTwitter } from '@react-icons/all-files/fa/FaTwitter';
 
 const StyledNav = styled.nav`
   display: flex;
@@ -42,7 +41,7 @@ const ButtonLink = styled.button`
   }
 `;
 
-const IconLink = styled.a`
+export const IconLink = styled.a`
   svg {
     padding-right: .3rem;
     width: 1.5rem;

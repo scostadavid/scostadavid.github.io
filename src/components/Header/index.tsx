@@ -7,7 +7,7 @@ const StyledHeader = styled.header`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   ul {
     list-style: none;
     display: flex;
