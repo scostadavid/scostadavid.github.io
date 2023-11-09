@@ -44,16 +44,20 @@ const ButtonLink = styled.button`
 
 const IconLink = styled.a`
   svg {
-    width: 1.7rem;
-    height: 1.7rem;
-    color: #fff;
+    padding-right: .3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: ${props => props?.color ?? '#fff'};
     transition: .2s;
-    :hover {
-      cursor: pointer;
-      color: #535bf2;
-
-    }
   }
+  :hover {
+    cursor: pointer;
+    color: #535bf2;
+
+  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 `;
 
 const List = styled.ul`
@@ -93,14 +97,16 @@ export const Nav = (): JSX.Element => {
   return (
     <StyledNav>
       <List>
-	    	<li>
-          <IconLink rel={'noopener noreferrer'} href="https://github.com/scostadavid" target={'_blank'}>
-            <FaGithub/>
+        <li>
+          <IconLink color={'#0069bd'} rel={'noopener noreferrer'} href={'https://linkedin.com/in/scostadavid'} target={'_blank'}>
+            <FaLinkedin />
+            Linkedin
           </IconLink>
         </li>
 	    	<li>
-          <IconLink rel={'noopener noreferrer'} href={'https://linkedin.com/in/scostadavid'} target={'_blank'}>
-            <FaLinkedin />
+          <IconLink color={'#e4edf3'} rel={'noopener noreferrer'} href="https://github.com/scostadavid" target={'_blank'}>
+            <FaGithub/>
+            Github
           </IconLink>
         </li>
         {/* <li>
