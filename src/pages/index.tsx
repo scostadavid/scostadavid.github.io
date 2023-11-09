@@ -24,9 +24,9 @@ const Content = styled.section`
 const AboutSection = (): JSX.Element => (
   <Content>
     <H1>
-      <TypeMachineParagraph quote={'👋 Hi i\'m David'}/>
+      <TypeMachineParagraph quote={'Hi i\'m David'}/>
       <noscript>
-      {'👋'} Hi, i’m <Link href={'https://linkedin.com/in/scostadavid'} target={'_blank'} rel={'noreferrer noopener'}>David Costa</Link>, a Full Stack Sofware Enginner based in Brazil. Currently developing web and mobile wellness solutions with React, Node, Rails, and AWS at <Link href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</Link>.
+      Hi, i’m <a href={'https://linkedin.com/in/scostadavid'} target={'_blank'} rel={'noreferrer noopener'}>David Costa</a>, a Full Stack Sofware Enginner based in Brazil. Currently developing web and mobile wellness solutions with React, Node, Rails, and AWS at <a href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</a>.
       </noscript>
     </H1>
     <Paragraph>
