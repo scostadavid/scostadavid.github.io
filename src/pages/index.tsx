@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
 import {
   H1,
@@ -83,7 +83,7 @@ const ProjectsSection = (): JSX.Element => {
   return (
     <Content>
       <H2>
-        Projects
+        Selected Work
       </H2>
       <GridList>
         {projects.map((project) => <ProjectEntry key={'pr_' + project.title} {...project}/>)}
@@ -92,6 +92,8 @@ const ProjectsSection = (): JSX.Element => {
   )
 
 };
+
+
 
 const IndexPage = (): JSX.Element => {
   return (
