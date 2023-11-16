@@ -1,31 +1,31 @@
 import styled from 'styled-components';
 import dlh from '../../images/dlh.avif';
 import shirmp from '../../images/shrimp.css.avif';
-import gof from '../../images/gameoflife.webp';
+import chameleon from '../../images/chameleon.avif';
 import fn from '../../images/fn.avif';
 
 export const projects = [
   {
-    title: '🎯 Focus nook',
-    description: 'Productivity focused app',
+    title: '🦎 Chameleon',
+    description: 'A URL shortener that helps digital marketers track campaigns performance',
+    imageSrc: chameleon,
+    link: 'https://github.com/scostadavid/chameleon',
+  },
+  {
+    title: '🎯 Focus Nook',
+    description: 'A productivity app that helps users focus and complete tasks more efficiently',
     imageSrc: fn,
     link: 'https://scostadavid.github.io/focusnook/',
   },
   {
-    title: '🦐 shrimp.css',
-    description: 'Classless CSS framework for markdown generated html',
+    title: '🦐 Shrimp.css',
+    description: 'A CSS framework that makes it easy to style markdown-generated HTML pages',
     imageSrc: shirmp,
     link: 'https://scostadavid.github.io/shrimp.css',
   },
   {
-    title: '🌱 Game of life',
-    description: 'C++ cellular automata simulation',
-    imageSrc: gof,
-    link: 'https://github.com/scostadavid/game-of-life',
-  },
-  {
     title: '🕹️ Dawn\'s Lighthouse',
-    description: 'C# plataformer game',
+    description: 'A PC platformer game that tells the story of a sailor trapped in a lighthouse',
     imageSrc: dlh,
     link: 'https://gamejolt.com/games/dawnslighthouse/574359',
   },
