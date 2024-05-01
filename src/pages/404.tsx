@@ -2,34 +2,12 @@ import * as React from 'react';
 import { Link } from 'gatsby';
 import { H1 } from '../components/Typography';
 
-// styles
-const pageStyles = {
-  color: "white",
-  padding: "96px",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
-
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
+    <main>
       <title>scostadavid</title>
-      <H1 color="#535bf2">{'<Page not found/>'}</H1>
-      <p style={paragraphStyles}>
+      <H1>{'<Page not found/>'}</H1>
+      <p>
         Sorry{" "}
         <span role="img" aria-label="Pensive emoji">
           😔

@@ -1,65 +1,59 @@
 import React, { useEffect, useState } from 'react';
-import styled from 'styled-components';
+import classNames from 'classnames';
 
-const H1 = styled.h1`
-  color: ${props => `${props.color}`};
-  font-size: 2.6rem;
-  font-weight: 700;
-  margin: 1rem 0;
-  @media (max-width: 850px) {}
-`;
+interface H1 {
+  className?: string;
+  text: string;
+}
 
-const H2 = styled.h2`
-  color: ${props => `${props.color}`};
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-
-  @media (max-width: 850px) {
-    font-size: 1.3rem;
-    word-break: break-word;
-  }
-`;
-
-const H3 = styled.h3`
-  color: ${props => `${props.color}`};
-  font-size: 1.2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-
-  @media (max-width: 850px) {}
-`;
-
-const Paragraph = styled.p`
-  color: ${props => `${props.color}`};
-  font-size: 1.1rem;
-  font-weight: 400;
-  line-height: 1.2;
-  margin-bottom: 0.6rem;
-
-  @media (max-width: 850px) {}
-`;
-
-const Span = styled.span`
-  color: ${props => props.color || '#333'};
-`;
-
-const BlinkingCursor = (): JSX.Element => {
-  const [show, setShow] = useState(true);
-
-  useEffect(() => {
-    const interval = setInterval(() => setShow(!show), 500);
-    return () => clearInterval(interval);
-  }, [show]);
-
+const H1 = ({className, text} : H1) => {
   return (
-    <Span color={'#fff'}>
-      {show && '_'}
-    </Span>
+    <h1 className={
+      classNames(
+        "text-black font-bold text-4xl mb-4",
+        className
+      )
+    }>
+      {text}
+    </h1>
   );
-};
+}
 
-const MS_INTERVAL: number = 40;
+interface H2 {
+  className?: string;
+  text: string;
+}
+
+const H2 = ({className, text} : H2) => {
+  return (
+    <h2 className={
+      classNames(
+        "font-bold text-2xl mb-4",
+        className
+      )
+    }>
+      {text}
+    </h2>
+  );
+}
+
+const Paragraph = ({children} : {children: string}) => {
+  return (
+    <p className="text-black text-lg mb-4">
+      {children}
+    </p>
+  );
+}
+
+const Span = ({children} : {children: string}) => {
+  return (
+    <span className="text-black">
+      {children}
+    </span>
+  );
+}
+
+const MS_INTERVAL: number = 50;
 
 interface TypeMachineParagraph {
   quote: string
@@ -75,9 +69,8 @@ const TypeMachineParagraph = ({quote}: TypeMachineParagraph): JSX.Element => {
 
   return (
     <>
-      <Span color="#535bf2">{'› '}</Span>
+      <Span>{' 👋 '}</Span>
       {quote.substring(0, index)}
-      <BlinkingCursor />
     </>
   );
 }
@@ -85,7 +78,6 @@ const TypeMachineParagraph = ({quote}: TypeMachineParagraph): JSX.Element => {
 export {
   H1,
   H2,
-  H3,
   Paragraph,
   TypeMachineParagraph,
   Span,

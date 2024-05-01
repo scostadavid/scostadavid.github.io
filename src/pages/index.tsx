@@ -1,118 +1,90 @@
-import React, { useEffect, useRef, useState } from 'react';
-import styled from 'styled-components';
+import React from 'react';
 import {
   H1,
   H2,
-  H3,
   Paragraph,
-  TypeMachineParagraph,
-  Span,
+  TypeMachineParagraph
 } from '../components/Typography';
 import Header from '../components/Header';
-import { Nav } from '../components/Nav';
 import { Footer } from '../components/Footer';
-import { Link } from '../components/Link';
-
-import { GridList, projects }  from '../components/ProjectsList';
-import { Container } from '../layout/Container';
-
-const Content = styled.section`
-  padding: 0 0 4rem 0;
-  color: #fff;
-`;
+import { Button } from '../components/ui/Button';
+import { projects } from '../data/projects';
+import {AnimatePresence, motion} from 'framer-motion';
+import { links } from '../data/contact';
 
 const AboutSection = (): JSX.Element => (
-  <Content>
-    <H1>
-      <TypeMachineParagraph quote={'Hi i\'m David'}/>
-      <noscript>
-      Hi, i’m <a href={'https://linkedin.com/in/scostadavid'} target={'_blank'} rel={'noreferrer noopener'}>David Costa</a>, a Full Stack Sofware Enginner based in Brazil. Currently developing web and mobile wellness solutions with React, Node, Rails, and AWS at <a href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</a>.
-      </noscript>
-    </H1>
-    <Paragraph>
-    I’m David Costa, a Full Stack Sofware Enginner based in Brazil. Currently developing web and mobile wellness solutions with React, Node, Rails, and AWS at <Link href={'https://gogood.com.br'} target={'_blank'} rel={'noreferrer noopener'}>GoGood Software</Link>.
-    </Paragraph>
-    <Nav/>
-  </Content>
-);
-
-const StyledEntry = styled.li`
-  border: 1px solid #454545;
-  border-radius: 5px;
-  padding: .5rem;
-  :hover {
-    border: 1px solid #535bf2;
-    cursor: pointer;
-  }
-  img {
-    border-radius: 5px;
-  }
-`;
-
-interface ProjectEntry {
-  title: string,
-  description: string,
-  imageSrc: string,
-  link: string,
-};
-
-const Image = styled.img`
-  width: 100%;
-  aspect-ratio: 16/9;
-`;
-
-const ProjectEntry = ({title, description, imageSrc, link}: ProjectEntry): JSX.Element => (
-  <StyledEntry>
-    <a
-      href={link}
-      target={'_blank'}
-      rel={'noreferrer noopener'}
-    >
-      <Image src={imageSrc} />
-      <H3>
-      {title}{' '}
-      </H3>
+  <section className="text-slate-200 bg-[#fff]">
+    <div className="max-w-xl mx-auto p-4">
+      <p className="text-black mb-4">Hi my name is</p>
+      <H1 text={'David Costa, i’m a Software Developer'} />
       <Paragraph>
-      {description}
+      Currently developing web and mobile wellness solutions with React, Node, Rails, and AWS at <a href="https://gogood.com.br" target="_blank" rel="noreferrer noopener" className="hover:cursor-pointer text-[#005aee]">GoGood Software</a>.
       </Paragraph>
-    </a>
-  </StyledEntry>
+      <Button>
+        <a className="text-black font-bold" rel="noopener noreferrer" href="https://linkedin.com/in/scostadavid" target="_blank">
+          <TypeMachineParagraph quote={'Let\'s connect'}/>
+        </a>
+      </Button>
+    </div>
+  </section>
 );
 
-const ProjectsSection = (): JSX.Element => {
+export const Projects = (): JSX.Element => {
   return (
-    <Content>
-      <H2>
-        Selected Work
-      </H2>
-      <GridList>
-        {projects.map((project) => <ProjectEntry key={'pr_' + project.title} {...project}/>)}
-      </GridList>
-    </Content>
+    <div className="text-slate-200  bg-[#fff]">
+      <div className="max-w-xl mx-auto p-4">
+        <H2 text="Projects" className="text-[#005aee]" />
+        <ul>
+          {projects.map(({id, title, description, url}) => (
+            <motion.li
+            whileHover={{ scale: 1.02 }} className="bg-[#f1f1f1] mb-2 p-2 rounded-md" key={'pj-' + id}>
+              <a href={url} target={'_blank'} rel={'noreferrer noopener'} className="mr-4 text-black hover:text-[#005aee] font-black">
+                {title}
+                <span className="text-black font-normal">
+                {' - '}{description}
+                </span>
+              </a>
+            </motion.li>
+          ))}
+        </ul>
+      </div>
+    </div>
   )
+}
 
-};
-
-
+export const Contact = (): JSX.Element => {
+  return (
+    <div className="text-slate-200  bg-[#fff]">
+      <div className="max-w-xl mx-auto p-4">
+        <H2 text="Contact" className="text-[#005aee]" />
+        <ul>
+        {links.map(({id, title, urlText, url}) => (
+            <li className=" text-black" key={'pj-' + id}>
+              <a href={url} target={'_blank'} rel={'noreferrer noopener'} className="mr-4 text-black hover:text-[#005aee] font-black">
+                {title}
+                <span className="text-black font-normal">
+                {' - '}{urlText}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )
+}
 
 const IndexPage = (): JSX.Element => {
   return (
     <>
       <title>scostadavid</title>
-      <Container>
-        <Header/>
-      </Container>
-      <main>
-        <Container>
-          <AboutSection/>
-          <ProjectsSection/>
-        </Container>
-      </main>
-      <Container>
-        <Footer/>
-      </Container>
+      <Header/>
+      <AboutSection />
+      <Projects/>
+      <Contact/>
+      <Footer/>
     </>
-  )
+  );
 }
 
-export default IndexPage
+export default IndexPage;
