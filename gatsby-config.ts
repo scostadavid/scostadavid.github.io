@@ -10,6 +10,7 @@ const config: GatsbyConfig = {
     "gatsby-plugin-sharp",
     "gatsby-plugin-postcss",
     "gatsby-transformer-sharp",
+    "gatsby-plugin-webpack-bundle-analyser-v2"
   ],
 }
 

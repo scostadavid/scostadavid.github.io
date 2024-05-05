@@ -3,17 +3,19 @@ import classNames from 'classnames';
 
 interface H1 {
   className?: string;
+  children?: JSX.Element;
   text: string;
 }
 
-const H1 = ({className, text} : H1) => {
+const H1 = ({className, children, text} : H1) => {
   return (
     <h1 className={
       classNames(
-        "text-black font-bold text-4xl mb-4",
+        "text-black font-bold text-5xl mb-4",
         className
       )
     }>
+      {children}
       {text}
     </h1>
   );
@@ -45,9 +47,18 @@ const Paragraph = ({children} : {children: string}) => {
   );
 }
 
-const Span = ({children} : {children: string}) => {
+interface Span {
+  className?: string,
+  children?: JSX.Element | string
+}
+const Span = ({className, children} : Span) => {
   return (
-    <span className="text-black">
+    <span className={
+      classNames(
+        "text-black",
+        className
+      )
+    }>
       {children}
     </span>
   );

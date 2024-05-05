@@ -3,6 +3,7 @@ import {
   H1,
   H2,
   Paragraph,
+  Span,
   TypeMachineParagraph
 } from '../components/Typography';
 import Header from '../components/Header';
@@ -18,11 +19,11 @@ const AboutSection = (): JSX.Element => (
       <p className="text-black mb-4">Hi my name is</p>
       <H1 text={'David Costa, i’m a Software Developer'} />
       <Paragraph>
-      Currently developing web and mobile wellness solutions with React, Node, Rails, and AWS at <a href="https://gogood.com.br" target="_blank" rel="noreferrer noopener" className="hover:cursor-pointer text-[#005aee]">GoGood Software</a>.
+      Currently developing full-stack web and mobile wellness solutions with React, Node, Rails, and AWS at <a href="https://gogood.com.br" target="_blank" rel="noreferrer noopener" className="hover:cursor-pointer text-[#005aee]">GoGood Software</a>.
       </Paragraph>
       <Button>
         <a className="text-black font-bold" rel="noopener noreferrer" href="https://linkedin.com/in/scostadavid" target="_blank">
-          <TypeMachineParagraph quote={'Let\'s connect'}/>
+          <Span>Let's connect</Span>
         </a>
       </Button>
     </div>
@@ -59,7 +60,7 @@ export const Contact = (): JSX.Element => {
         <H2 text="Contact" className="text-[#005aee]" />
         <ul>
         {links.map(({id, title, urlText, url}) => (
-            <li className=" text-black" key={'pj-' + id}>
+            <li className=" text-black mb-2" key={'pj-' + id}>
               <a href={url} target={'_blank'} rel={'noreferrer noopener'} className="mr-4 text-black hover:text-[#005aee] font-black">
                 {title}
                 <span className="text-black font-normal">
@@ -78,6 +79,7 @@ const IndexPage = (): JSX.Element => {
   return (
     <>
       <title>scostadavid</title>
+      <meta name="description" content="Software developer" />
       <Header/>
       <AboutSection />
       <Projects/>
