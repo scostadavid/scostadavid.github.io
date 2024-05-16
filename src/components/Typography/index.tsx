@@ -11,7 +11,7 @@ const H1 = ({className, children, text} : H1) => {
   return (
     <h1 className={
       classNames(
-        "text-black font-bold text-5xl mb-4",
+        "text-content font-bold text-5xl mb-4",
         className
       )
     }>
@@ -41,7 +41,7 @@ const H2 = ({className, text} : H2) => {
 
 const Paragraph = ({children} : {children: string}) => {
   return (
-    <p className="text-black text-lg mb-4">
+    <p className="text-content text-lg mb-4">
       {children}
     </p>
   );
@@ -55,7 +55,6 @@ const Span = ({className, children} : Span) => {
   return (
     <span className={
       classNames(
-        "text-black",
         className
       )
     }>

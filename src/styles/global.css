@@ -12,3 +12,21 @@ a {
   text-decoration: none;
   color: #ffffffe0;
 }
+
+.light {
+  --background: #e8effc;
+  --content: #000;
+  --cta: #624ce0;
+  --cta-text: #fff;
+  --cta-hover: #4d38c4;
+  --card: #c8dbff;
+}
+
+.dark {
+  --background: #1a1a1a;
+  --content: #ffffff;
+  --cta: #e0d84c;
+  --cta-text: #000;
+  --cta-hover: #aaa213;
+  --card: #333333;
+}

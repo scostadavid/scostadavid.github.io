@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   H1,
   H2,
@@ -12,18 +12,18 @@ import { Button } from '../components/ui/Button';
 import { projects } from '../data/projects';
 import {AnimatePresence, motion} from 'framer-motion';
 import { links } from '../data/contact';
+import { Layout } from '../components/Layout';
 
 const AboutSection = (): JSX.Element => (
-  <section className="text-slate-200 bg-[#fff]">
-    <div className="max-w-xl mx-auto p-4">
-      <p className="text-black mb-4">Hi my name is</p>
-      <H1 text={'David Costa, i’m a Software Developer'} />
+  <section className="text-slate-200 ">
+    <div className="max-w-xl mx-auto px-8 py-4">
+      <H1 text={'Software Developer'} />
       <Paragraph>
-      Currently developing full-stack web and mobile wellness solutions with React, Node, Rails, and AWS at <a href="https://gogood.com.br" target="_blank" rel="noreferrer noopener" className="hover:cursor-pointer text-[#005aee]">GoGood Software</a>.
+      Hi my name is David Costa, Currently developing full-stack web and mobile wellness solutions with React, Node, Rails, and AWS at <a href="https://gogood.com.br" target="_blank" rel="noreferrer noopener" className="hover:cursor-pointer text-cta">GoGood Software</a>.
       </Paragraph>
       <Button>
-        <a className="text-black font-bold" rel="noopener noreferrer" href="https://linkedin.com/in/scostadavid" target="_blank">
-          <Span>Let's connect</Span>
+        <a className="text-cta-text font-bold" rel="noopener noreferrer" href="https://linkedin.com/in/scostadavid" target="_blank">
+          Let's connect
         </a>
       </Button>
     </div>
@@ -32,16 +32,16 @@ const AboutSection = (): JSX.Element => (
 
 export const Projects = (): JSX.Element => {
   return (
-    <div className="text-slate-200  bg-[#fff]">
-      <div className="max-w-xl mx-auto p-4">
-        <H2 text="Projects" className="text-[#005aee]" />
+    <div className="text-slate-200  ">
+      <div className="max-w-xl mx-auto px-8 py-4">
+        <H2 text="Projects" className="text-cta" />
         <ul>
           {projects.map(({id, title, description, url}) => (
             <motion.li
-            whileHover={{ scale: 1.02 }} className="bg-[#f1f1f1] mb-2 p-2 rounded-md" key={'pj-' + id}>
-              <a href={url} target={'_blank'} rel={'noreferrer noopener'} className="mr-4 text-black hover:text-[#005aee] font-black">
+            whileHover={{ scale: 1.02 }} className="bg-card mb-2 p-2 rounded-md" key={'pj-' + id}>
+              <a href={url} target={'_blank'} rel={'noreferrer noopener'} className="mr-4 text-content hover:text-cta font-black">
                 {title}
-                <span className="text-black font-normal">
+                <span className="text-content font-normal">
                 {' - '}{description}
                 </span>
               </a>
@@ -55,15 +55,15 @@ export const Projects = (): JSX.Element => {
 
 export const Contact = (): JSX.Element => {
   return (
-    <div className="text-slate-200  bg-[#fff]">
-      <div className="max-w-xl mx-auto p-4">
-        <H2 text="Contact" className="text-[#005aee]" />
+    <div className="text-slate-200  ">
+      <div className="max-w-xl mx-auto px-8 py-4">
+        <H2 text="Contact" className="text-cta" />
         <ul>
         {links.map(({id, title, urlText, url}) => (
-            <li className=" text-black mb-2" key={'pj-' + id}>
-              <a href={url} target={'_blank'} rel={'noreferrer noopener'} className="mr-4 text-black hover:text-[#005aee] font-black">
+            <li className=" text-content mb-2" key={'pj-' + id}>
+              <a href={url} target={'_blank'} rel={'noreferrer noopener'} className="mr-4 text-content hover:text-cta font-black">
                 {title}
-                <span className="text-black font-normal">
+                <span className="text-content font-normal">
                 {' - '}{urlText}
                 </span>
               </a>
@@ -76,15 +76,24 @@ export const Contact = (): JSX.Element => {
 }
 
 const IndexPage = (): JSX.Element => {
+
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
+
   return (
     <>
-      <title>scostadavid</title>
-      <meta name="description" content="Software developer" />
-      <Header/>
-      <AboutSection />
-      <Projects/>
-      <Contact/>
-      <Footer/>
+      {/* <title>scostadavid</title> */}
+      {/* <meta name="description" content="Software developer" /> */}
+      {/* <Header/> */}
+      <Layout>
+        <AboutSection />
+        <Projects/>
+        <Contact/>
+      </Layout>
+      {/* <Footer/> */}
     </>
   );
 }
