@@ -11,7 +11,7 @@ const H1 = ({className, children, text} : H1) => {
   return (
     <h1 className={
       classNames(
-        "text-content font-bold text-5xl mb-4",
+        "text-content font-bold text-3xl mb-4",
         className
       )
     }>

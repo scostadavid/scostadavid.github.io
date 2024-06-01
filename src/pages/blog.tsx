@@ -16,11 +16,10 @@ import { Layout } from '../components/Layout';
 
 const AboutSection = (): JSX.Element => (
   <section className="text-slate-200 ">
-    <div className="max-w-xl mx-auto px-8 pt-8 pb-8">
-      <Span className="text-content">Hello, I’m David Costa a</Span>
+    <div className="max-w-xl mx-auto px-8 py-4">
       <H1 text={'Software Developer'} />
       <Paragraph>
-      I enjoy crafting solid and scalable software experiences
+      Hi my name is David Costa, Currently developing full-stack web and mobile wellness solutions with React, Node, Rails, and AWS at <a href="https://gogood.com.br" target="_blank" rel="noreferrer noopener" className="hover:cursor-pointer text-cta">GoGood Software</a>.
       </Paragraph>
       <Button>
         <a className="text-cta-text font-bold" rel="noopener noreferrer" href="https://linkedin.com/in/scostadavid" target="_blank">
@@ -34,7 +33,7 @@ const AboutSection = (): JSX.Element => (
 export const Projects = (): JSX.Element => {
   return (
     <div className="text-slate-200  ">
-      <div className="max-w-xl mx-auto px-8 pb-8 pt-8">
+      <div className="max-w-xl mx-auto px-8 py-4">
         <H2 text="Projects" className="text-cta" />
         <ul>
           {projects.map(({id, title, description, url}) => (
@@ -57,7 +56,7 @@ export const Projects = (): JSX.Element => {
 export const Contact = (): JSX.Element => {
   return (
     <div className="text-slate-200  ">
-      <div className="max-w-xl mx-auto px-8 pb-8 pt-8">
+      <div className="max-w-xl mx-auto px-8 py-4">
         <H2 text="Contact" className="text-cta" />
         <ul>
         {links.map(({id, title, urlText, url}) => (

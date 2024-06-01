@@ -1,6 +1,12 @@
 export const projects = [
   {
     id: 1,
+    title: '⚜️ Scout',
+    description: 'A lightweight tool to monitor the status of your web services',
+    url: 'https://github.com/scostadavid/scout',
+  },
+  {
+    id: 2,
     title: '🦎 Chameleon',
     description: 'A URL shortener that helps digital marketers track campaigns performance',
     url: 'https://github.com/scostadavid/chameleon',
@@ -10,12 +16,6 @@ export const projects = [
     title: '🎯 Focus Nook',
     description: 'A productivity app that helps users focus and complete tasks more efficiently',
     url: 'https://scostadavid.github.io/focusnook/',
-  },
-  {
-    id: 3,
-    title: '🦐 Shrimp.css',
-    description: 'A CSS framework that makes it easy to style markdown-generated HTML pages',
-    url: 'https://scostadavid.github.io/shrimp.css',
   },
   {
     id: 4,
