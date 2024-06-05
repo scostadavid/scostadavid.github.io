@@ -2,13 +2,13 @@ export const projects = [
   {
     id: 1,
     title: '⚜️ Scout',
-    description: 'A lightweight tool to monitor the status of your web services',
+    description: 'A lightweight web services uptime status monitor',
     url: 'https://github.com/scostadavid/scout',
   },
   {
     id: 2,
     title: '🦎 Chameleon',
-    description: 'A URL shortener that helps digital marketers track campaigns performance',
+    description: 'A URL shortener tool for digital marketing campaigns performance tracking',
     url: 'https://github.com/scostadavid/chameleon',
   },
   {

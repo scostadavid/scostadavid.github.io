@@ -1,16 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import {
   H1,
   H2,
   Paragraph,
-  Span,
-  TypeMachineParagraph
+  Span
 } from '../components/Typography';
-import Header from '../components/Header';
-import { Footer } from '../components/Footer';
 import { Button } from '../components/ui/Button';
 import { projects } from '../data/projects';
-import {AnimatePresence, motion} from 'framer-motion';
 import { links } from '../data/contact';
 import { Layout } from '../components/Layout';
 
@@ -38,15 +34,14 @@ export const Projects = (): JSX.Element => {
         <H2 text="Projects" className="text-cta" />
         <ul>
           {projects.map(({id, title, description, url}) => (
-            <motion.li
-            whileHover={{ scale: 1.02 }} className="bg-card mb-2 p-2 rounded-md" key={'pj-' + id}>
-              <a href={url} target={'_blank'} rel={'noreferrer noopener'} className="mr-4 text-content hover:text-cta font-black">
+            <li className="bg-card mb-2 p-2 rounded-md transform transition-transform duration-200 hover:scale-105" key={'pj-' + id}>
+              <a href={url} target="_blank" rel="noreferrer noopener" className="mr-4 text-content hover:text-cta font-black">
                 {title}
                 <span className="text-content font-normal">
-                {' - '}{description}
+                  {' - '}{description}
                 </span>
               </a>
-            </motion.li>
+            </li>
           ))}
         </ul>
       </div>
@@ -77,24 +72,20 @@ export const Contact = (): JSX.Element => {
 }
 
 const IndexPage = (): JSX.Element => {
-
-  const [theme, setTheme] = useState("light");
-
-  const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
-
   return (
     <>
-      {/* <title>scostadavid</title> */}
-      {/* <meta name="description" content="Software developer" /> */}
-      {/* <Header/> */}
+      <meta name="description" content="scostadavid blog, software developer"/>
+      <meta name="keywords" content="scostadavid, David Costa, software developer, full stack, portfolio, projects, skills, experience"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="author" content="David Costa"/>
+
+      <title>scostadavid | software developer</title>
+
       <Layout>
         <AboutSection />
         <Projects/>
         <Contact/>
       </Layout>
-      {/* <Footer/> */}
     </>
   );
 }

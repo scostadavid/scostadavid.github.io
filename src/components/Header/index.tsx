@@ -26,7 +26,7 @@ export const Header = ({theme, toggleTheme}: any): JSX.Element => {
           }
         </Button> */}
 
-        <Button className="bg-transparent hover:bg-transparent relative w-5 h-5" onClick={toggleTheme}>
+        <Button className="flex bg-cta text-white font-bold rounded rounded bg-transparent hover:bg-transparent relative justify-center items-center align-middle" onClick={toggleTheme}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"

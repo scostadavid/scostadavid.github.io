@@ -2,7 +2,8 @@ import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `scostadavid`,
+    title: `scostadavid | software developer`,
+    description: `scostadavid blog, software developer`,
     siteUrl: `https://scostadavid.github.io`,
   },
   plugins: [
