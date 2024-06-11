@@ -9,6 +9,7 @@ import { Button } from '../components/ui/Button';
 import { projects } from '../data/projects';
 import { links } from '../data/contact';
 import { Layout } from '../components/Layout';
+import { SEO } from '../components/SEO';
 
 const AboutSection = (): JSX.Element => (
   <section className="text-slate-200 ">
@@ -91,3 +92,10 @@ const IndexPage = (): JSX.Element => {
 }
 
 export default IndexPage;
+
+export const Head = () => (
+  <>
+    <html lang="en" />
+    <SEO />
+  </>
+)

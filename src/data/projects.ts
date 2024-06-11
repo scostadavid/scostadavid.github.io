@@ -1,18 +1,18 @@
 export const projects = [
   {
     id: 1,
+    title: '🌐 Chameleon url',
+    description: 'Effortlessly shorten and manage your marketing campaign URLs',
+    url: 'https://chameleonurl.vercel.app',
+  },
+  {
+    id: 2,
     title: '⚜️ Scout',
     description: 'A lightweight web services uptime status monitor',
     url: 'https://github.com/scostadavid/scout',
   },
   {
-    id: 2,
-    title: '🦎 Chameleon',
-    description: 'A URL shortener tool for digital marketing campaigns performance tracking',
-    url: 'https://github.com/scostadavid/chameleon',
-  },
-  {
-    id: 2,
+    id: 3,
     title: '🎯 Focus Nook',
     description: 'A productivity app that helps users focus and complete tasks more efficiently',
     url: 'https://scostadavid.github.io/focusnook/',
