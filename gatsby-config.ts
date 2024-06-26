@@ -8,25 +8,24 @@ const config: GatsbyConfig = {
   },
   plugins: [
     {
-      resolve: "gatsby-plugin-google-gtag",
-      trackingIds: [
-        "G-7XLM5TDPNE",
-      ],
-      gtagConfig: {
-        anonymize_ip: true,
-        cookie_expires: 0,
-      },
-      // This object is used for configuration specific to this plugin
-      pluginConfig: {
-        // Puts tracking script in the head instead of the body
-        head: true,
-        // Setting this parameter is also optional
-        respectDNT: true,
-        // Avoids sending pageview hits from custom paths
-        exclude: ["/preview/**", "/do-not-track/me/too/"],
-        // Delays processing pageview events on route update (in milliseconds)
-        delayOnRouteUpdate: 0,
-      },
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "G-7XLM5TDPNE",
+
+        // Include GTM in development.
+        //
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+
+        // datalayer to be set before GTM is loaded
+        // should be an object or a function that is executed in the browser
+        //
+        // Defaults to null
+        defaultDataLayer: { platform: "gatsby" },
+
+        // Defaults to false
+        enableWebVitalsTracking: true,
+      }
     },
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
