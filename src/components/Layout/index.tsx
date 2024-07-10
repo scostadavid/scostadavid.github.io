@@ -6,11 +6,7 @@ import {Footer} from "../Footer"
 import "../../styles/global.css"
 
 export const Layout = ({ children }: any) => {
-  const [theme, setTheme] = useState<string>(() => {
-    const userPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    console.log(userPrefersDark);
-    return userPrefersDark ? 'dark' : 'light';
-  });
+  const [theme, setTheme] = useState<string>('light');
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');

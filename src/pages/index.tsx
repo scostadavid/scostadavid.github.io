@@ -10,6 +10,7 @@ import { projects } from '../data/projects';
 import { links } from '../data/contact';
 import { Layout } from '../components/Layout';
 import { SEO } from '../components/SEO';
+import { Link } from 'gatsby';
 
 const AboutSection = (): JSX.Element => (
   <section className="text-slate-200 ">
@@ -35,11 +36,11 @@ export const Projects = (): JSX.Element => {
   return (
     <div className="text-slate-200  ">
       <div className="max-w-xl mx-auto px-8 pb-8 pt-8">
-        <H2 text="Projects" className="text-cta" />
+        <H2 text="Selected Projects" className="text-cta" />
         <ul>
           {projects.map(({id, title, description, url}) => (
             <li key={'pj-' + id}>
-              <a href={url} target="_blank" rel="noreferrer noopener" className="mr-4 text-content hover:text-cta font-black block bg-card mb-2 p-2 rounded-md transform transition-transform duration-200 hover:scale-105">
+              <a href={url} target="_blank" rel="noreferrer noopener" className="text-content hover:text-cta font-black block bg-card mb-2 p-2 rounded-md transform transition-transform duration-200 hover:scale-105">
                 {title}
                 <span className="text-content font-normal">
                   {' - '}{description}
@@ -48,6 +49,7 @@ export const Projects = (): JSX.Element => {
             </li>
           ))}
         </ul>
+        <span className="pt-2"><Link to="https://github.com/scostadavid?tab=repositories" className="hover:text-cta" target="_blank" rel="noreferrer noopener">see more →</Link></span>
       </div>
     </div>
   )
