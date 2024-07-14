@@ -49,7 +49,7 @@ export const Projects = (): JSX.Element => {
             </li>
           ))}
         </ul>
-        <span className="pt-2"><Link to="https://github.com/scostadavid?tab=repositories" className="hover:text-cta" target="_blank" rel="noreferrer noopener">see more →</Link></span>
+        <span className="pt-2"><Link to="https://github.com/scostadavid?tab=repositories" className="hover:text-cta text-content" target="_blank" rel="noreferrer noopener">see more →</Link></span>
       </div>
     </div>
   )
