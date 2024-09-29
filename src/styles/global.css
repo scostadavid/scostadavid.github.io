@@ -18,15 +18,13 @@ a {
   --content: #000;
   --cta: #4900ff;
   --cta-text: #fff;
-  --cta-hover: #4d38c4;
   --card: #e9e9e9;
 }
 
 .dark {
   --background: #101010;
   --content: #ffffff;
-  --cta: #7580ff;
+  --cta: #f5d523;
   --cta-text: #000;
-  --cta-hover: #aaa213;
   --card: #1c1c1c;
 }

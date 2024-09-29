@@ -29,9 +29,9 @@ export const Layout = ({ children }: any) => {
   };
 
   return (
-    <div className="bg-background">
+    <div className="bg-background h-screen">
       <Header theme={theme} toggleTheme={toggleTheme}/>
-      <main className="h-full">
+      <main className="">
       {children}
       </main>
       <Footer/>
