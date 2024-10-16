@@ -14,17 +14,17 @@ a {
 }
 
 .light {
-  --background: #f9fafc;
-  --content: #000;
-  --cta: #4900ff;
+  --background: #ebebeb;
+  --content: #333;
+  --cta: #3582fd;
   --cta-text: #fff;
-  --card: #e9e9e9;
+  --card: #e7e7e7;
 }
 
 .dark {
   --background: #101010;
   --content: #ffffff;
-  --cta: #f5d523;
+  --cta: #F59E00;
   --cta-text: #000;
   --card: #1c1c1c;
 }

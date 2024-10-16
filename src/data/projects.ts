@@ -7,14 +7,8 @@ export const projects = [
   },
   {
     id: 2,
-    title: '🌱 Focus Garden',
-    description: 'Grow your productivity with my focus driven app',
-    url: 'https://scostadavid.github.io/focusgarden/',
-  },
-  {
-    id: 3,
-    title: '🕹️ Dawn\'s Lighthouse',
-    description: 'A short gaming experience about a sailor trapped in a lighthouse',
-    url: 'https://gamejolt.com/games/dawnslighthouse/574359',
-  },
+    title: '🎱 The Challengers (Available Soon)',
+    description: 'Grab your cue and take part in the championship of the century',
+    url: undefined,
+  }
 ];

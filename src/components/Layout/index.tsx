@@ -1,12 +1,10 @@
 import React, {useEffect, useState} from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql, Link } from "gatsby"
 import {Header} from "../Header"
 import {Footer} from "../Footer"
 import "../../styles/global.css"
 
 export const Layout = ({ children }: any) => {
-  const [theme, setTheme] = useState<string>('light');
+  const [theme, setTheme] = useState<string>('dark');
 
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
@@ -29,7 +27,7 @@ export const Layout = ({ children }: any) => {
   };
 
   return (
-    <div className="bg-background h-screen">
+    <div className="bg-background min-h-screen">
       <Header theme={theme} toggleTheme={toggleTheme}/>
       <main className="">
       {children}
