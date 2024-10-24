@@ -3,11 +3,10 @@ import classNames from 'classnames';
 
 interface H1 {
   className?: string;
-  children?: JSX.Element;
-  text: string;
+  children?: React.ReactNode | string;
 }
 
-const H1 = ({className, children, text} : H1) => {
+const H1 = ({className, children} : H1) => {
   return (
     <h1 className={
       classNames(
@@ -16,7 +15,6 @@ const H1 = ({className, children, text} : H1) => {
       )
     }>
       {children}
-      {text}
     </h1>
   );
 }
@@ -51,7 +49,7 @@ interface Span {
   className?: string,
   children?: JSX.Element | string
 }
-const Span = ({className, children} : Span) => {
+const Span = ({className, children} : Span): JSX.Element => {
   return (
     <span className={
       classNames(

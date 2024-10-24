@@ -17,9 +17,12 @@ const AboutSection = (): JSX.Element => (
   <section className="text-slate-200">
     <div className="max-w-xl mx-auto px-8 pt-8 pb-8">
       <Span className="text-content">Hello, I’m David Costa a</Span>
-      <H1 text={'Software Developer'} />
+      <H1>
+        {'Sofware'}{' '}
+        <Span className="text-cta">{'Developer'}</Span>
+      </H1>
       <Paragraph>
-      I enjoy crafting solid and scalable software experiences
+      Over 4 years of experience in building solutions and solving complex problems.
       </Paragraph>
       <nav className="flex flex-row gap-4 align-middle flex-wrap">
         <Link to="https://linkedin.com/in/scostadavid" className="flex flex-row gap-2 items-center text-content hover:text-cta self-center hover:scale-105" target="_blank">
