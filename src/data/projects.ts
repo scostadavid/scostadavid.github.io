@@ -8,7 +8,7 @@ export const projects = [
   {
     id: 2,
     title: '🎱 The Challengers (Available Soon)',
-    description: 'Grab your cue and take part in the championship of the century',
+    description: 'Grab your cue and take part in a pool based adventure game',
     url: undefined,
   }
 ];

@@ -6,7 +6,7 @@ export const Footer = (): JSX.Element => {
     <footer className="">
       <div className="max-w-xl mx-auto px-8 pt-8 pb-8">
         <a className="text-content" href={'https://github.com/scostadavid'} target={'_blank'} rel={'noreferrer noopener'}>
-          &copy; 2024{' - '}scostadavid
+          &copy; 2024 scostadavid. All rights reserved.
         </a>
       </div>
     </footer>
