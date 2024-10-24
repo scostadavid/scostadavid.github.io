@@ -6,12 +6,11 @@ export const Header = ({theme, toggleTheme}: any): JSX.Element => {
   return (
     <header className=" items-center">
       <div className="flex flex-row justify-between max-w-xl px-8 pt-8 pb-8 mx-auto">
-        <div className="flex flex-row">
           <Link to="/" className="text-cta font-bold text-2xl align-middle self-center hover:scale-105">
             {'scostadavid'}
           </Link>
 
-          <Button aria-label="theme-switcher" className="flex bg-cta text-white font-bold rounded rounded bg-transparent hover:bg-transparent relative justify-center items-center align-middle hover:animate-spin" onClick={toggleTheme}>
+          <Button aria-label="theme-switcher" className="flex bg-cta text-white font-bold rounded rounded bg-transparent hover:bg-transparent relative justify-center items-center align-middle" onClick={toggleTheme}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -49,7 +48,6 @@ export const Header = ({theme, toggleTheme}: any): JSX.Element => {
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
             </svg>
           </Button>
-        </div>
       </div>
     </header>
   )
