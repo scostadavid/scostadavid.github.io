@@ -17,7 +17,8 @@ a {
 .light {
   --background: #ffffff;
   --content: #181818;
-  --cta: #3582fd;
+  --cta: #181818;
+  --highlight: #3582fd;
   --cta-text: #fff;
   --card: #e7e7e7;
 }
@@ -25,7 +26,8 @@ a {
 .dark {
   --background: #000000;
   --content: #ffffff;
-  --cta: #F59E00;
+  --cta: #ffffff;
+  --highlight: #F59E00;
   --cta-text: #000;
   --card: #1c1c1c;
 }

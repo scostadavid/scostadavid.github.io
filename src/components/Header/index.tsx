@@ -10,7 +10,7 @@ export const Header = ({theme, toggleTheme}: any): JSX.Element => {
             {'scostadavid'}
           </Link>
 
-          <Button aria-label="theme-switcher" className="flex bg-cta text-white font-bold rounded rounded bg-transparent hover:bg-transparent relative justify-center items-center align-middle" onClick={toggleTheme}>
+          <Button aria-label="theme-switcher" className="flex border-1 border border-card bg-cta text-white font-bold rounded rounded bg-transparent hover:bg-transparent relative justify-center items-center align-middle" onClick={toggleTheme}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
