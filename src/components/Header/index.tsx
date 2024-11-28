@@ -5,7 +5,7 @@ import { Button } from "../ui/Button";
 export const Header = ({theme, toggleTheme}: any): JSX.Element => {
   return (
     <header className=" items-center">
-      <div className="flex flex-row justify-between max-w-xl px-8 pt-8 pb-8 mx-auto">
+      <div className="flex flex-row justify-between max-w-2xl mx-auto px-8 py-8">
           <Link to="/" className="text-cta font-bold text-2xl align-middle self-center hover:scale-105">
             {'scostadavid'}
           </Link>

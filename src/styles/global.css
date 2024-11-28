@@ -15,19 +15,19 @@ a {
 }
 
 .light {
-  --background: #ffffff;
-  --content: #181818;
-  --cta: #181818;
-  --highlight: #3582fd;
-  --cta-text: #fff;
-  --card: #e7e7e7;
+  --background: #f9f9f9;
+  --content: #333333;
+  --cta: #444444;
+  --highlight: #4a90e2;
+  --cta-text: #ffffff;
+  --card: #f0f0f0;
 }
 
 .dark {
-  --background: #000000;
-  --content: #ffffff;
-  --cta: #ffffff;
-  --highlight: #F59E00;
-  --cta-text: #000;
+  --background: #121212;
+  --content: #eaeaea;
+  --cta: #cccccc;
+  --highlight: #f5b342;
+  --cta-text: #101010;
   --card: #1c1c1c;
 }
