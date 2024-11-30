@@ -6,13 +6,13 @@ export const projects = [
     url: 'https://bytekit.xyz',
     status: "available",
   },
-  {
-    id: 1,
-    title: '💪 Gym Logger',
-    description: 'An app to track your workout consistency with ease',
-    url: 'https://gymlogger.xyz',
-    status: "coming-soon"
-  },
+  // {
+  //   id: 1,
+  //   title: '💪 Gym Logger',
+  //   description: 'An app to track your workout consistency with ease',
+  //   url: 'https://gymlogger.xyz',
+  //   status: "coming-soon"
+  // },
   {
     id: 2,
     title: '🎱 The Challengers',
