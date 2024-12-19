@@ -49,7 +49,7 @@ const AboutSection = (): JSX.Element => (
           </svg>
           <span>Twitter</span>
         </Link>
-        <Link to="mailto:scostadavid.dev@gmail.com" 
+        <Link to="mailto:contato@scostadavid.dev" 
               className="flex flex-row gap-2 items-center text-content hover:text-cta self-center 
                          transition-all duration-300 ease-in-out hover:scale-105" 
               target="_blank">
