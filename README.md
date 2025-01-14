@@ -20,7 +20,7 @@ $ yarn build
 
 ## 👨‍💻 Maintainers/Contributors
 
-* David Costa - [mailto:scostadavid.dev@gmail.com](mailto:scostadavid.dev@gmail.com)
+* David Costa - [mailto:contact@scostadavid.dev](mailto:contact@scostadavid.dev)
 
 ## 📝 License
 
