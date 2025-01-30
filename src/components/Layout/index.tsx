@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react"
 import {Header} from "../Header"
-import {Footer} from "../Footer"
+import {Footer} from "../footer";
 import "../../styles/global.css"
 
 export const Layout = ({ children }: any) => {
@@ -21,9 +21,12 @@ export const Layout = ({ children }: any) => {
     document.body.classList.add(theme);
   }, [theme]);
 
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
-  };
+  const toggleTheme = (selectedTheme: string) => {
+    setTheme(selectedTheme);
+    localStorage.setItem("theme", selectedTheme);
+    document.body.classList.remove("light", "dark");
+    document.body.classList.add(selectedTheme);
+  };  
 
   return (
     <div className={`bg-background min-h-screen ${theme}`}>

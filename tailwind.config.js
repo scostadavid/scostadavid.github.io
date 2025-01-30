@@ -11,6 +11,7 @@ module.exports = {
         background: "var(--background)",
         content: "var(--content)",
         cta: "var(--cta)",
+        highlight: "var(--highlight)",
         "cta-text": "var(--cta-text)",
         "cta-hover": "var(--cta-hover)",
         "card": "var(--card)",
@@ -18,6 +19,6 @@ module.exports = {
     },
 
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 }
 

@@ -1,3 +1,6 @@
+import bk from '../images/bk.webp';
+import tc from '../images/tc.webp';
+
 export const projects = [
   {
     id: 0,
@@ -5,6 +8,7 @@ export const projects = [
     description: 'Everyday developer tools to make your programming easier',
     url: 'https://bytekit.xyz',
     status: "available",
+    image: bk
   },
   // {
   //   id: 1,
@@ -18,6 +22,7 @@ export const projects = [
     title: '🎱 The Challengers',
     description: 'Grab your cue and take part in a pool based adventure game',
     url: "#",
-    status: "coming-soon"
+    status: "coming-soon",
+    image: tc,
   }
 ];

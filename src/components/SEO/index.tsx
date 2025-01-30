@@ -15,6 +15,11 @@ export const SEO = ({ title, description, pathname, children }: SEO) => {
   return (
     <>
       <title>{seo.title}</title>
+      <meta name="description" content="scostadavid blog, software developer"/>
+      <meta name="keywords" content="scostadavid, David Costa, software developer, full stack, portfolio, projects, skills, experience"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="author" content="David Costa"/>
+      
       <meta name="description" content={seo.description} />
       {/* <meta name="image" content={seo.image} /> */}
       <meta name="twitter:card" content="summary_large_image" />

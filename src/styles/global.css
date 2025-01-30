@@ -14,8 +14,48 @@ a {
   color: #ffffffe0;
 }
 
+article h1, article h2, article h3 {
+  font-weight: bolder;
+  margin-top: 1rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+hr {
+  @apply border-b border-neutral-100 dark:border-neutral-800;
+}
+
+article p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+article a {
+  color: #2563eb; /* Azul Tailwind */
+  text-decoration: underline;
+}
+
+article ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+article img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centraliza a imagem */
+}
+
+.gatsby-resp-image-image {
+  width: 100% !important;
+  height: auto !important;
+}
+
 .light {
-  --background: #f9f9f9;
+  --background: #ffffff;
   --content: #333333;
   --cta: #444444;
   --highlight: #4a90e2;

@@ -7,6 +7,37 @@ const config: GatsbyConfig = {
     siteUrl: `https://scostadavid.github.io`,
   },
   plugins: [
+    // blog
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/content/blog`,
+      },
+    },
+    `gatsby-transformer-remark`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1080, 
+              withWebp: true,
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-", // Prefixo para classes de linguagem
+              showLineNumbers: false, // Exibe números de linha (opcional)
+            },
+          },
+        ],
+      },
+    },
+    // analytics
     {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
