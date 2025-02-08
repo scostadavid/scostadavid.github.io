@@ -1,7 +1,13 @@
 import classNames from 'classnames';
 import React from 'react';
 
-export const Button = ({className, children, onClick}: {className?: string, children: JSX.Element | string, onClick?: any}) => {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  children: React.ReactNode;
+  className?: string;
+  onClick?: any;
+}
+
+export const Button = ({className, children, onClick}: ButtonProps) => {
   return (
     <button
       className={

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Layout } from '../components/Layout';
-import { SEO } from '../components/SEO';
-import { H1, H2, Span } from '../components/Typography';
+import { Layout } from '../components/layout';
+import { SEO } from '../components/seo';
+import { H1, H2, Span } from '../components/typography';
 import { Link } from 'gatsby';
 import { graphql, PageProps } from 'gatsby';
 import { PostList } from '../components/post-list';

@@ -2,10 +2,10 @@ import React from 'react';
 import {
   H1,
   H2, Span
-} from '../components/Typography';
+} from '../components/typography';
 import { projects } from '../data/projects';
-import { Layout } from '../components/Layout';
-import { SEO } from '../components/SEO';
+import { Layout } from '../components/layout';
+import { SEO } from '../components/seo';
 import { graphql, Link, PageProps } from 'gatsby';
 import { PostList } from '../components/post-list';
 import { techs } from '../data/techs';

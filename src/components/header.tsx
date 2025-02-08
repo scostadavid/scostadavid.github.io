@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
-import { Button } from "../ui/Button";
+import { Button } from "./ui/button";
 
 export const Header = ({ theme, toggleTheme }: any): JSX.Element => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +14,7 @@ export const Header = ({ theme, toggleTheme }: any): JSX.Element => {
     <header className="items-center">
       <div className="flex flex-row justify-between max-w-4xl mx-auto px-8 py-8 relative">
         <Link to="/" className="text-cta font-bold text-2xl align-middle self-center">
-          {'scostadavid'}
+        👨‍💻 {'scostadavid'}
         </Link>
 
         <div className="relative">
@@ -52,7 +52,7 @@ export const Header = ({ theme, toggleTheme }: any): JSX.Element => {
                 theme === 'light' ? 'opacity-100 text-content rotate-0' : 'opacity-0 -rotate-90'
               }`}
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="2"y
               strokeLinecap="round"
               strokeLinejoin="round"
             >

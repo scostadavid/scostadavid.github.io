@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import { H1 } from '../components/Typography';
+import { H1 } from '../components/typography';
 
 const NotFoundPage = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react"
-import { useSiteMetadata } from "../../hooks/useSiteMetada"
+import { useSiteMetadata } from "../hooks/useSiteMetada"
 
 interface SEO { title?: string, description?: string, pathname?: string, children?: any };
 

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react"
-import {Header} from "../Header"
-import {Footer} from "../footer";
-import "../../styles/global.css"
+import {Header} from "./header"
+import {Footer} from "./footer";
+import "../styles/global.css"
 
 export const Layout = ({ children }: any) => {
   const [theme, setTheme] = useState<string>("dark");

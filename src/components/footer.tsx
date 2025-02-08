@@ -1,4 +1,3 @@
-
 import { Link } from "gatsby";
 import React from "react";
 
@@ -20,7 +19,7 @@ export const Footer = () => {
               David Costa
             </Link>
             <p className="max-w-64 text-center text-sm text-content sm:text-left">
-              Over 4 years of problem solving experience
+              Computer Science graduate from São Paulo State University with over 4 years of problem solving experience
             </p>
           </div>
 
