@@ -85,7 +85,7 @@ export const Footer = () => {
             onClick={scrollToTop}
             className="flex h-9 w-9 items-center justify-center rounded-md border border-neutral-200 dark:border-neutral-800 text-cta transition-all hover:bg-card/10 hover:text-highlight active:scale-95"
           >
-           ^
+           {'↑'}
           </button>
         </div>
       </div>
